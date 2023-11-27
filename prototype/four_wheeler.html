@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tata R&D Company</title>
+</head>
+<body>
+    <h1>CAR Model</h1>
+    <script>
+       
+        function Four_Wheeler(Name,length, width, height, wheelbase, ground_clearance, boot_space) {
+            this.Name = Name;
+            this.length = length;
+            this.width = width;
+            this.height = height;
+            this.wheelbase = wheelbase;
+            this.ground_clearance = ground_clearance;
+            this.boot_space = boot_space;
+        }
+
+        let Old_Nexon = new Four_Wheeler("OLD NEXON",3933 + "mm", 1811 + "mm", 1606 + "mm", 2498 + "mm", 209 + "mm(unladen)", 412 + "litres(V215)");
+
+        let New_Nexon = Object.create(Old_Nexon);
+
+       
+        New_Nexon.airbags = 4;
+        New_Nexon.feature = function () {
+            console.log("X Factor tail lamp");
+        };
+
+       
+        New_Nexon.Name = "NEW NEXON "
+        New_Nexon.length = 3935 + "mm";
+        New_Nexon.width = 1804 + "mm";
+        New_Nexon.height = 1620 + "mm";
+        New_Nexon.ground_clearance = "Up to " + 208 + "mm(unladen)";
+        New_Nexon.boot_space = 382 + "litres(V215)";
+
+        //output
+        console.log(New_Nexon);
+        
+        New_Nexon.feature();
+
+        console.log(New_Nexon.airbags)
+    </script>
+</body>
+</html>
